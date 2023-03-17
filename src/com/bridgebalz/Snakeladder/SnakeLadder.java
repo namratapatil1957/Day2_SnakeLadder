@@ -68,5 +68,6 @@ Scanner sc = new Scanner (System.in);
 			
 		}
 		
+		System.out.println("\n The dice roll for " +dice_count + " times");
 	}
 }
