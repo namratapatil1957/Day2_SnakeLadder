@@ -23,6 +23,8 @@ Scanner sc = new Scanner (System.in);
 	
 	
 	public void play() {
+		
+		while (current_position < win_position) {
 			
 			int dice = (int) (Math.random()*(max - min) + min);
 			System.out.println("\n The dice number is: " + dice);
@@ -56,8 +58,15 @@ Scanner sc = new Scanner (System.in);
 				break;
 				
 			}
-				
-			System.out.println(" After moving current position is: " + current_position);
 			
+			if (current_position > 100) {
+				current_position = current_position - dice;
+				System.out.println(" After moving current position is: " + current_position);
+			}else {
+				System.out.println(" After moving current position is: " + current_position);
+			}
+			
+		}
+		
 	}
 }
